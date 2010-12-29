@@ -1,0 +1,9 @@
+--- origsrc/qfrustration-0.2/QFrustrationClient/icons/CMakeLists.txt	2010-12-25 19:24:55.000000000 -0600
++++ src/qfrustration-0.2/QFrustrationClient/icons/CMakeLists.txt	2010-12-28 21:31:32.220296600 -0600
+@@ -1,5 +1,5 @@
+ if(UNIX)
+-    file(GLOB frust_icons *.png)
++    file(GLOB frust_icons RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.png)
+     foreach(_current_ICON ${frust_icons})
+         string(REGEX MATCH "([0-9]+)\\-(.+\\.png)$" _dummy "${_current_ICON}")
+         set(_size "${CMAKE_MATCH_1}")

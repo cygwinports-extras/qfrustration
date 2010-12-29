@@ -1,0 +1,25 @@
+--- origsrc/qfrustration-0.2/QFrustrationLib/CMakeLists.txt	2010-12-25 19:24:53.000000000 -0600
++++ src/qfrustration-0.2/QFrustrationLib/CMakeLists.txt	2010-12-28 21:25:17.928844000 -0600
+@@ -42,6 +42,7 @@ set(MOC_HEADERS server.h
+ qt4_wrap_cpp(MOC_FILES ${MOC_HEADERS})
+ add_library(QFrustrationLib SHARED ${SRCS} ${QT_CREATOR_FILES} ${MOC_FILES})
+ target_link_libraries(QFrustrationLib ${QT_LIBRARIES})
+-INSTALL(TARGETS QFrustrationLib DESTINATION ${FRUST_LIB_INSTALL_DIR})
+-install(FILES ${HEADERS} DESTINATION ${FRUST_INCLUDE_INSTALL_DIR}/QFrustrationLib COMPONENT Devel)
++INSTALL(TARGETS QFrustrationLib LIBRARY DESTINATION ${FRUST_LIB_INSTALL_DIR}
++                                RUNTIME DESTINATION ${FRUST_BIN_INSTALL_DIR})
++#install(FILES ${HEADERS} DESTINATION ${FRUST_INCLUDE_INSTALL_DIR}/QFrustrationLib COMPONENT Devel)
+ 
+--- origsrc/qfrustration-0.2/QFrustrationSharedGUI/CMakeLists.txt	2010-12-25 19:24:55.000000000 -0600
++++ src/qfrustration-0.2/QFrustrationSharedGUI/CMakeLists.txt	2010-12-28 21:25:29.628864400 -0600
+@@ -47,7 +47,8 @@ qt4_wrap_cpp(MOC_FILES ${MOC_HEADERS})
+ QT4_WRAP_UI(UI_FILES ${UI_HEADERS})
+ add_library(QFrustrationSharedGUI SHARED ${SRCS} ${QT_CREATOR_FILES} ${MOC_FILES} ${UI_FILES})
+ target_link_libraries(QFrustrationSharedGUI ${QT_LIBRARIES})
+-INSTALL(TARGETS QFrustrationSharedGUI DESTINATION ${FRUST_LIB_INSTALL_DIR})
+-install(FILES ${HEADERS} DESTINATION ${FRUST_INCLUDE_INSTALL_DIR}/QFrustrationSharedGUI COMPONENT Devel)
++INSTALL(TARGETS QFrustrationSharedGUI LIBRARY DESTINATION ${FRUST_LIB_INSTALL_DIR}
++                                      RUNTIME DESTINATION ${FRUST_BIN_INSTALL_DIR})
++#install(FILES ${HEADERS} DESTINATION ${FRUST_INCLUDE_INSTALL_DIR}/QFrustrationSharedGUI COMPONENT Devel)
+ 
+ 
