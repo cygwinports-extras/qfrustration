@@ -1,8 +1,13 @@
 inherit qt4-cmake
 
+NAME="qfrustration"
+VERSION=0.2.1
+RELEASE=1
+CATEGORY="Games"
+SUMMARY="Qt Frustration board game"
 DESCRIPTION="Qt Frustration board game"
 HOMEPAGE="http://Qt-Apps.org/content/show.php/QFrustration?content=136662"
-SRC_URI="http://Qt-Apps.org/CONTENT/content-files/136662-${P}.tar.bz2"
+SRC_URI="http://Qt-Apps.org/CONTENT/content-files/136662-${NAME}-${VERSION}.tar.bz2"
 
 PATCH_URI="
 	0.2-lib-install.patch
